@@ -12,7 +12,7 @@ int main()
     long long y=x*x;
     cout <<(x*x)<< endl;
     cout << y << endl;
-
+    cout <<"j"<< endl;
 
 
     return 0;
