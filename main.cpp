@@ -13,7 +13,7 @@ int main()
     cout <<(x*x)<< endl;
     cout << y << endl;
 
-    cout << test<< endl;
+
 
     return 0;
 }
