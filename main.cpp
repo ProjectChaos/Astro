@@ -25,9 +25,7 @@ double power(int exp, double val){
     return acc;
 }
 double wurzelinout(){
-    double a;
-    double x;
-    double y;
+    double a,x,y;
     int j=1;
     string komplex="";
 
