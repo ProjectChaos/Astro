@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <conio.h>
 using namespace std;
 using std::cin;
 
@@ -93,6 +93,7 @@ double wurzelinout(){
     double y;
     int j=1;
     string komplex="";
+
     cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;
     cout << "*     WURZELBERECHNUNG MIT DEM HERON ALGORITHMUS      *" << endl;
@@ -119,6 +120,7 @@ else {}
 cout << endl << "ERGEBNIS: Wurzel a=:  " << x << komplex <<endl;
 cout << endl << "Benoetigte Berechnungschritte= " << j << endl;
 cout << endl << "Genaugikeit:"  << abs(x-y) << endl;
+cout << "Zum Beenden beliebige Taste druecken"<<endl;
    return 0;
 }
 int main()
@@ -138,5 +140,7 @@ int main()
 wurzelinout();
 
 //        cout << power(-2,2);
+     getch();
     return 0;
+
 }
