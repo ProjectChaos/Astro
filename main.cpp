@@ -61,16 +61,6 @@ cout << "Zum Beenden beliebige Taste druecken"<<endl;
 int main()
 {
 
-//    cout << "Hello world!" << endl;
-//    long long x;
-//    cout << "geben sie eine Zahl von 0 bis 1000000000000 ein: ";
-//    cin >>x;
-//    long long y=x*x;
-//    cout <<(x*x)<< endl;
-//    cout << y << endl;
-//
-//    cout <<"j"<< endl;
-
 wurzelinout();
 
 //        cout << power(-2,2);
