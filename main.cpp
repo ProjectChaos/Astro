@@ -62,6 +62,7 @@ int main()
 {
 
 wurzelinout();
+wurzelinout();
 
 //        cout << power(-2,2);
      getch();
