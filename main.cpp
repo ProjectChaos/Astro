@@ -57,8 +57,7 @@ else {}
 cout << endl << "ERGEBNIS: Wurzel a=:  " << x << komplex <<endl;
 cout << endl << "Benoetigte Berechnungschritte= " << j << endl;
 cout << endl << "Genaugikeit:"  << abs(x-y) << endl;
-cout << "Zum Beenden beliebige Taste druecken"<<endl;
-   return 0;
+return 0;
 }
 
 
@@ -69,7 +68,18 @@ return ss.str();
 }
 
 
-string dezToBin(int dez){
+string dezToBin(){
+      cout << "*******************************************************"<< endl ;
+    cout << "*                                                     *"<< endl ;
+    cout << "*  UMRECHNUNG EINER DEZIMALZAHL IN DAS BINAERSYSTEM   *" << endl;
+    cout << "*                                                     *"<< endl ;
+    cout << "*******************************************************"<< endl << endl;
+    cout << "Geben sie eine Dezimalzahl ein:"<< endl;
+    cout << "a= ";
+    int dez;
+    cin >> dez;
+    cout << endl;
+
     string output = "";
     if (dez==0){
     return "0";
@@ -78,7 +88,9 @@ string dezToBin(int dez){
         output = convertIntToString(dez%2) + output;
         dez = floor (dez/2);
     }
+    cout << output;
     return output;
+
     }
 
 //int convertstringtoint(string str){
@@ -90,18 +102,30 @@ string dezToBin(int dez){
 //int binToDez
 int main()
 {
-cout<< "Wählen Sie die gewünschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl;
+    int i =10;
+    while(i>0){
+    cout << endl << endl <<endl;
+    cout << "*******************************************************"<< endl ;
+    cout << "*                                                     *"<< endl ;
+    cout << "*   xXPROJECTXx CHAOS98 Takes no prisoners RECHNER    *" << endl;
+    cout << "*                                                     *"<< endl ;
+    cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
+
+
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
     wurzelinout();
 }
 if(selection1=="b"){
-int a;
-cin>>a;
+dezToBin();
 
-
-cout<<dezToBin(a);
+}
+if(selection1=="x"){
+    return 0;
+}
+i--;
 }
 getch();
 return 0;
