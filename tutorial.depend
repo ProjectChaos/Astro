@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
-1379422881 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
+1379510747 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
 	<iostream>
 	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
+	<stdlib.h>
 
 1379505764 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>

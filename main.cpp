@@ -90,8 +90,19 @@ string dezToBin(int dez){
 //int binToDez
 int main()
 {
+cout<< "Wählen Sie die gewünschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl;
+string selection1;
+cin >> selection1;
+if(selection1=="a"){
+    wurzelinout();
+}
+if(selection1=="b"){
+int a;
+cin>>a;
 
 
-
+cout<<dezToBin(a);
+}
+getch();
 return 0;
 }
