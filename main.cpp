@@ -3,6 +3,7 @@
 #include <math.h>
 #include <sstream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 using std::cin;
 
@@ -67,6 +68,11 @@ string convertIntToString(int number){
 return ss.str();
 }
 
+long  convertStringToInt(string s){
+    long  number = stol(s.substr(1,2));
+    return number;
+}
+
 
 string dezToBin(int dez){
     string output = "";
@@ -83,11 +89,13 @@ string dezToBin(int dez){
 int main()
 {
 
-// \r\n benutzen
     int a;
     cin>> a;
     cout << dezToBin(a);
 //        cout << power(-2,2);
+
+    string str = "123";
+    cout << convertIntToString(str);
      getch();
     return 0;
 
