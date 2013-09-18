@@ -92,15 +92,6 @@ int main()
 {
 
 
-//char bin [20] = "100101";
-//int i = atoi( bin );
-//cout << i*2;
-//     getch();
-string str;
-char bin[20];
-bin[20]= str;
-cin>>str;
-int i = atoi( bin );
-cout<<i;
+
 return 0;
 }
