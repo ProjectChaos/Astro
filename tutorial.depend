@@ -3,6 +3,10 @@
 	<iostream>
 	<conio.h>
 
-1379420678 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1379505764 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
+	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
 

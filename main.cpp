@@ -1,9 +1,10 @@
 #include <iostream>
 #include <conio.h>
+#include <math.h>
+#include <sstream>
+#include <string>
 using namespace std;
 using std::cin;
-
-
 
 double abs(double c){
 if(c<0){
@@ -58,10 +59,34 @@ cout << endl << "Genaugikeit:"  << abs(x-y) << endl;
 cout << "Zum Beenden beliebige Taste druecken"<<endl;
    return 0;
 }
+
+
+string convertIntToString(int number){
+    stringstream ss;
+    ss << number;
+return ss.str();
+}
+
+
+string dezToBin(int dez){
+    string output = "";
+    if (dez==0){
+    return "0";
+    }
+    while (dez>0){
+        output = convertIntToString(dez%2) + output;
+        dez = floor (dez/2);
+    }
+    return output;
+    }
+
 int main()
 {
 
-
+// \r\n benutzen
+    int a;
+    cin>> a;
+    cout << dezToBin(a);
 //        cout << power(-2,2);
      getch();
     return 0;
