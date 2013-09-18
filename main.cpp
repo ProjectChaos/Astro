@@ -3,6 +3,7 @@
 #include <math.h>
 #include <sstream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 using std::cin;
 
@@ -80,15 +81,26 @@ string dezToBin(int dez){
     return output;
     }
 
+//int convertstringtoint(string str){
+//char bin[]= str;
+//int i = atoi( bin );
+//return i;
+//
+//}
+//int binToDez
 int main()
 {
 
-// \r\n benutzen
-    int a;
-    cin>> a;
-    cout << dezToBin(a);
-//        cout << power(-2,2);
-     getch();
-    return 0;
 
+//char bin [20] = "100101";
+//int i = atoi( bin );
+//cout << i*2;
+//     getch();
+string str;
+char bin[20];
+bin[20]= str;
+cin>>str;
+int i = atoi( bin );
+cout<<i;
+return 0;
 }
