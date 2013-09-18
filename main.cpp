@@ -61,8 +61,6 @@ cout << "Zum Beenden beliebige Taste druecken"<<endl;
 int main()
 {
 
-wurzelinout();
-wurzelinout();
 
 //        cout << power(-2,2);
      getch();
