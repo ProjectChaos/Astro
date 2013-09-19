@@ -69,7 +69,7 @@ return ss.str();
 
 
 string dezToBin(){
-      cout << "*******************************************************"<< endl ;
+    cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;
     cout << "*  UMRECHNUNG EINER DEZIMALZAHL IN DAS BINAERSYSTEM   *" << endl;
     cout << "*                                                     *"<< endl ;
@@ -107,7 +107,7 @@ int main()
     cout << endl << endl <<endl;
     cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;
-    cout << "*   xXPROJECTXx CHAOS98 Takes no prisoners RECHNER    *" << endl;
+    cout << "*   xXPROJECTXx CHAOS98 Takes no prisoners RECHNER    *"<<endl;
     cout << "*                                                     *"<< endl ;
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
