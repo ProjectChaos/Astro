@@ -7,10 +7,16 @@
 	<string>
 	<stdlib.h>
 
-1379505764 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1379517344 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
 	<sstream>
 	<string>
+	<stdlib.h>
+
+1379597737 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
+	"Koord.h"
+
+1379597722 c:\users\philipp\workspacec++\astro2\include\koord.h
 
