@@ -68,8 +68,6 @@ string convertIntToString(int number){
     ss << number;
 return ss.str();
 }
-
-
 string dezToBin(){
     dezString();
     cout << "a= ";
@@ -89,7 +87,19 @@ string dezToBin(){
     return output;
 
     }
-
+double abstand(Koord a, Koord b){
+int x1= a.x;
+int x2= b.x;
+int y1= a.y;
+int y2= b.y;
+int z1= a.z;
+int z2= b.z;
+double r;
+int l;
+l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
+r=(sqrt(l));
+return r;
+}
 //int convertstringtoint(string str){
 //char bin[]= str;
 //int i = atoi( bin );
