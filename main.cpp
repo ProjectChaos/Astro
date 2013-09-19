@@ -72,12 +72,7 @@ return ss.str();
 
 
 string dezToBin(){
-    cout << "*******************************************************"<< endl ;
-    cout << "*                                                     *"<< endl ;
-    cout << "*  UMRECHNUNG EINER DEZIMALZAHL IN DAS BINAERSYSTEM   *" << endl;
-    cout << "*                                                     *"<< endl ;
-    cout << "*******************************************************"<< endl << endl;
-    cout << "Geben sie eine Dezimalzahl ein:"<< endl;
+    dezString();
     cout << "a= ";
     int dez;
     cin >> dez;
