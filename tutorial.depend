@@ -7,7 +7,7 @@
 	<string>
 	<stdlib.h>
 
-1379601832 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1379606167 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -17,6 +17,7 @@
 	"Koord.h"
 	"Planet.h"
 	"hello.h"
+	<Koord.h>
 
 1379604961 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"

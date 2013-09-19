@@ -7,6 +7,7 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
+#include <Koord.h>
 using namespace std;
 using std::cin;
 
@@ -62,8 +63,6 @@ cout << endl << "Benoetigte Berechnungschritte= " << j << endl;
 cout << endl << "Genaugikeit:"  << abs(x-y) << endl;
 return 0;
 }
-
-
 string convertIntToString(int number){
     stringstream ss;
     ss << number;
@@ -100,9 +99,11 @@ string dezToBin(){
 //int binToDez
 int main()
 {
-    Koord k1,k2;
-    k1.setKoord(0,0,0);
-    k2.setKoord(2,2,2);
+//    Koord k1 = new Koord();
+//    Koord k2 = new Koord();// k1,k2;
+//    k1.setKoord(0,0,0);
+//    k2.setKoord(2,2,2);
+//    cout << k1.x << endl;
     hello();
     int i =10;
     while(i>0){
@@ -125,7 +126,7 @@ dezToBin();
 
 }
 if(selection1=="c"){
-    abstand(k1,k2);
+//    abstand(k1,k2);
 }
 if(selection1=="x"){
     return 0;
