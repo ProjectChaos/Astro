@@ -4,6 +4,9 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
+#include "Koord.h"
+#include "Planet.h"
+#include "hello.h"
 using namespace std;
 using std::cin;
 
@@ -102,6 +105,7 @@ string dezToBin(){
 //int binToDez
 int main()
 {
+    hello();
     int i =10;
     while(i>0){
     cout << endl << endl <<endl;
