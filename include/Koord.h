@@ -5,7 +5,9 @@
 class Koord
 {
     public:
-        Koord(int x, int y);
+        Koord();
+        int x, y, z;
+        void setKoord(int, int, int);
         virtual ~Koord();
     protected:
     private:

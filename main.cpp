@@ -68,12 +68,7 @@ string convertIntToString(int number){
 return ss.str();
 }
 string dezToBin(){
-    cout << "*******************************************************"<< endl ;
-    cout << "*                                                     *"<< endl ;
-    cout << "*  UMRECHNUNG EINER DEZIMALZAHL IN DAS BINAERSYSTEM   *" << endl;
-    cout << "*                                                     *"<< endl ;
-    cout << "*******************************************************"<< endl << endl;
-    cout << "Geben sie eine Dezimalzahl ein:"<< endl;
+    dezString();
     cout << "a= ";
     int dez;
     cin >> dez;
@@ -113,6 +108,9 @@ return r;
 //int binToDez
 int main()
 {
+    Koord k1,k2;
+    k1.setKoord(0,0,0);
+    k2.setKoord(2,2,2);
     hello();
     int i =10;
     while(i>0){
@@ -133,6 +131,9 @@ if(selection1=="a"){
 if(selection1=="b"){
 dezToBin();
 
+}
+if(selection1=="c"){
+    abstand(k1,k2);
 }
 if(selection1=="x"){
     return 0;
