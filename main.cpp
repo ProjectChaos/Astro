@@ -4,8 +4,8 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
-//#include "Koord.h"
-//#include "Planet.h"
+#include "Koord.h"
+#include "Planet.h"
 #include "hello.h"
 
 
@@ -88,20 +88,20 @@ string dezToBin(){
     return output;
 
     }
-//
-//double abstand(Koord a, Koord b){
-//int x1= a.x;
-//int x2= b.x;
-//int y1= a.y;
-//int y2= b.y;
-//int z1= a.z;
-//int z2= b.z;
-//double r;
-//int l;
-//l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
-//r=(sqrt(l));
-//return r;
-//}
+
+double abstand(Koord a, Koord b){
+int x1= a.x;
+int x2= b.x;
+int y1= a.y;
+int y2= b.y;
+int z1= a.z;
+int z2= b.z;
+double r;
+int l;
+l= power(2,(x1-x2)) + power(2,(y1-y2)) + power(2,(z1-z2));
+r=sqrt(l);
+return r;
+}
 
 //int convertstringtoint(string str){
 //char bin[]= str;
@@ -112,11 +112,21 @@ string dezToBin(){
 //int binToDez
 int main()
 {
-//    Koord k1;
-//    Koord k2;// k1,k2;
-//    k1.setKoord(0,0,0);
-//    k2.setKoord(2,2,2);
-//    cout << k1.x << endl;
+    Koord k1;
+    Koord k2;// k1,k2;
+    k1.setKoord(0,0,0);
+    k2.setKoord(1,2,3);
+
+    Planet earth;
+    Planet mars;
+    earth.setK(k1);
+    earth.setName("earth");
+    earth.setEarthMass(1);
+    mars.setK(k2);
+    mars.setName("mars");
+    mars.setEarthMass(0.107);
+
+    cout << abstand(k1,k2)<< endl;
     hello();
     int i =10;
     while(i>0){
