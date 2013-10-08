@@ -7,7 +7,7 @@
 	<string>
 	<stdlib.h>
 
-1379606167 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1381249422 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -17,14 +17,13 @@
 	"Koord.h"
 	"Planet.h"
 	"hello.h"
-	<Koord.h>
 
-1379604961 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
+1381161551 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"
 
-1379604913 c:\users\philipp\workspacec++\astro2\include\koord.h
+1381249397 c:\users\philipp\workspacec++\astro2\include\koord.h
 
-1379599256 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
+1381161562 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
 1379597952 c:\users\philipp\workspacec++\astro2\include\planet.h
@@ -33,4 +32,17 @@
 	<iostream>
 
 1379601746 c:\users\philipp\workspacec++\astro2\include\hello.h
+
+1379606725 c:\users\philipp\workspacec++\astro2\src\planet.h
+
+1379606725 c:\users\philipp\workspacec++\astro2\src\koord.h
+
+1381161551 c:\users\philipp\workspacec++\astro2\koord.cpp
+	"Koord.h"
+
+1379606725 c:\users\philipp\workspacec++\astro2\koord.h
+
+1379597952 c:\users\philipp\workspacec++\astro2\planet.h
+
+1379601746 c:\users\philipp\workspacec++\astro2\hello.h
 

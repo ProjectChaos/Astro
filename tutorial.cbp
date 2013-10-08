@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -33,7 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="hello.cpp" />
+		<Unit filename="include/Koord.h" />
+		<Unit filename="include/Planet.h" />
+		<Unit filename="include/hello.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Koord.cpp" />
+		<Unit filename="src/Planet.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

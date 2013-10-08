@@ -4,10 +4,11 @@
 #include <sstream>
 #include <string>
 #include <stdlib.h>
-#include "Koord.h"
-#include "Planet.h"
+//#include "Koord.h"
+//#include "Planet.h"
 #include "hello.h"
-#include <Koord.h>
+
+
 using namespace std;
 using std::cin;
 
@@ -87,19 +88,21 @@ string dezToBin(){
     return output;
 
     }
-double abstand(Koord a, Koord b){
-int x1= a.x;
-int x2= b.x;
-int y1= a.y;
-int y2= b.y;
-int z1= a.z;
-int z2= b.z;
-double r;
-int l;
-l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
-r=(sqrt(l));
-return r;
-}
+//
+//double abstand(Koord a, Koord b){
+//int x1= a.x;
+//int x2= b.x;
+//int y1= a.y;
+//int y2= b.y;
+//int z1= a.z;
+//int z2= b.z;
+//double r;
+//int l;
+//l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
+//r=(sqrt(l));
+//return r;
+//}
+
 //int convertstringtoint(string str){
 //char bin[]= str;
 //int i = atoi( bin );
@@ -109,8 +112,8 @@ return r;
 //int binToDez
 int main()
 {
-//    Koord k1 = new Koord();
-//    Koord k2 = new Koord();// k1,k2;
+//    Koord k1;
+//    Koord k2;// k1,k2;
 //    k1.setKoord(0,0,0);
 //    k2.setKoord(2,2,2);
 //    cout << k1.x << endl;
