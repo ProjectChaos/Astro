@@ -21,9 +21,23 @@ class Planet
         double getEarthMass(){return earthMass;}
         void setEarthMass(double val){earthMass = val;}
 
+        double getXAcc(){return xAcc;}
+        double getYAcc(){return yAcc;}
+        void setXAcc(double val){xAcc = val;}
+        void setYAcc(double val){yAcc = val;}
+
         std::string name;
         Koord k;
         double earthMass;
+        double xAcc;
+        double yAcc;
+
+        void bewegen(){
+            double xkoord = k.getX() + xAcc;
+            double ykoord = k.getY() + yAcc;
+            k.setX(xkoord);
+            k.setY(ykoord);
+        }
 };
 
 #endif // PLANET_H

@@ -12,6 +12,8 @@
 using namespace std;
 using std::cin;
 
+int globalTime =0;
+
 double abs(double c){
 if(c<0){
     c=-1*c;
@@ -110,6 +112,22 @@ return r;
 //
 //}
 //int binToDez
+double abstandP(Planet a, Planet b){
+        return abstand(a.getK(), b.getK());
+}
+
+
+//stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
+void stepper(Planet pa, Planet pb){
+while(globalTime<50){
+    cout << globalTime << endl;
+    pa.bewegen();
+    pb.bewegen();
+    cout << abstandP(pa,pb) <<endl;
+    globalTime++;
+        }
+}
+
 int main()
 {
     Koord k1;
@@ -122,11 +140,17 @@ int main()
     earth.setK(k1);
     earth.setName("earth");
     earth.setEarthMass(1);
+    earth.setXAcc(1);
+    earth.setYAcc(2);
     mars.setK(k2);
     mars.setName("mars");
     mars.setEarthMass(0.107);
+    mars.setXAcc(-1);
+    mars.setYAcc(-1);
 
-    cout << abstand(k1,k2)<< endl;
+    //cout << abstand(k1,k2)<< endl;
+    //cout << abstandP(earth,mars);
+
     hello();
     int i =10;
     while(i>0){
@@ -138,7 +162,7 @@ int main()
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
@@ -149,7 +173,7 @@ dezToBin();
 
 }
 if(selection1=="c"){
-//    abstand(k1,k2);
+stepper(earth,mars);
 }
 if(selection1=="x"){
     return 0;
