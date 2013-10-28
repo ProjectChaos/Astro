@@ -7,12 +7,12 @@ class Hochzahl
     public:
         Hochzahl();
         virtual ~Hochzahl();
-        double Getfaktor() { return faktor; }
-        void Setfaktor(double val) { faktor = val; }
-        int Getordnung() { return ordnung; }
-        void Setordnung(int val) { ordnung = val; }
-    protected:
-    private:
+        double getFaktor() { return faktor; }
+        void SstFaktor(double val) { faktor = val; }
+        int getOrdnung() { return ordnung; }
+        void SetOrdnung(int val) { ordnung = val; }
+
+
         double faktor;
         int ordnung;
 };
