@@ -13,7 +13,12 @@ using namespace std;
 using std::cin;
 
 int globalTime =0;
-
+long long abs(long long c){
+if (c<0){
+    c=-1*c;
+}
+    return c;
+}
 double abs(double c){
 if(c<0){
     c=-1*c;
@@ -91,12 +96,12 @@ string dezToBin(){
 
     }
 
-<<<<<<< HEAD
 
-int l;double abstand(Koord a, Koord b){
-=======
+
+
+
 double abstand(Koord a, Koord b){
->>>>>>> origin/master
+
 int x1= a.x;
 int x2= b.x;
 int y1= a.y;
@@ -121,6 +126,9 @@ double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
+int massDiff(Planet a, Planet b){
+return abs((a.getMass()-b.getMass()));
+}
 
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
 void stepper(Planet pa, Planet pb){
@@ -145,11 +153,13 @@ int main()
     earth.setK(k1);
     earth.setName("earth");
     earth.setEarthMass(1);
+    earth.setMass(5972190000000000000000000);
     earth.setXAcc(1);
     earth.setYAcc(2);
     mars.setK(k2);
     mars.setName("mars");
     mars.setEarthMass(0.107);
+    mars.setMass(641850000000000000000000);
     mars.setXAcc(-1);
     mars.setYAcc(-1);
 
@@ -167,7 +177,12 @@ int main()
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
+    << "(a) Wurzel ziehen" <<endl
+    << "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
+    <<"(c) Planetensimulation starten"<<endl
+    <<"(d) Massendifferenz"<<endl
+    << "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
@@ -180,6 +195,11 @@ dezToBin();
 if(selection1=="c"){
 stepper(earth,mars);
 }
+if(selection1=="d"){
+massDiff(earth,mars);
+cout<<massDiff(earth,mars)<<endl;
+}
+
 if(selection1=="x"){
     return 0;
 }

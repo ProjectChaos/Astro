@@ -26,9 +26,14 @@ class Planet
         void setXAcc(double val){xAcc = val;}
         void setYAcc(double val){yAcc = val;}
 
+        int  getMass() {return mass;}
+        void       setMass(int val){mass = val;}
+
         std::string name;
         Koord k;
         double earthMass;
+        long long mass;
+
         double xAcc;
         double yAcc;
 
