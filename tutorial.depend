@@ -10,7 +10,7 @@
 	"Planet.h"
 	"hello.h"
 
-1382960980 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1382969551 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -20,6 +20,7 @@
 	"Koord.h"
 	"Planet.h"
 	"hello.h"
+	"Test.h"
 
 1381247006 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"
@@ -29,14 +30,14 @@
 1382355165 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
-1382355169 c:\users\philipp\workspacec++\astro2\include\planet.h
+1382965154 c:\users\philipp\workspacec++\astro2\include\planet.h
 	<string>
 	"Koord.h"
 
 1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
-1379598146 c:\users\philipp\workspacec++\astro2\include\hello.h
+1382969536 c:\users\philipp\workspacec++\astro2\include\hello.h
 
 1379601746 D
 
@@ -71,4 +72,10 @@
 
 1382954689 source:c:\users\johannes\documents\workspacec++\tutorial\src\planet.cpp
 	"Planet.h"
+
+1382967997 source:c:\users\philipp\workspacec++\astro2\src\test.cpp
+	"Test.h"
+
+1382969947 c:\users\philipp\workspacec++\astro2\include\test.h
+	<string>
 

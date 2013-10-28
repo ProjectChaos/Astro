@@ -7,6 +7,7 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
+#include "Test.h"
 
 
 using namespace std;
@@ -162,6 +163,12 @@ int main()
     mars.setMass(641850000000000000000000);
     mars.setXAcc(-1);
     mars.setYAcc(-1);
+
+    //Konstriktor Funktioniert jetzt
+    //erst Klassenname
+    //Dann name fuer das Objekt, Klammer mit werten
+    Test test1 (1,2,3.0,"blatest");
+    cout << test1.Gettest4();
 
     //cout << abstand(k1,k2)<< endl;
     //cout << abstandP(earth,mars);
