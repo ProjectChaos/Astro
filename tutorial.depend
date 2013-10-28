@@ -1,11 +1,14 @@
 # depslib dependency file v1.0
-1379513288 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
+1379602762 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
 	<sstream>
 	<string>
 	<stdlib.h>
+	"Koord.h"
+	"Planet.h"
+	"hello.h"
 
 1379601832 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
@@ -32,4 +35,10 @@
 	<iostream>
 
 1379601746 c:\users\philipp\workspacec++\astro2\include\hello.h
+
+1379602762 c:\users\johannes\documents\workspacec++\tutorial\include\koord.h
+
+1379595959 c:\users\johannes\documents\workspacec++\tutorial\include\planet.h
+
+1379602762 c:\users\johannes\documents\workspacec++\tutorial\include\hello.h
 
