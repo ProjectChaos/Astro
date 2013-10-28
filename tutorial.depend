@@ -10,7 +10,7 @@
 	"Planet.h"
 	"hello.h"
 
-1379601832 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1382358712 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -21,24 +21,41 @@
 	"Planet.h"
 	"hello.h"
 
-1379604961 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
+1381250606 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"
 
-1379604913 c:\users\philipp\workspacec++\astro2\include\koord.h
+1381251000 c:\users\philipp\workspacec++\astro2\include\koord.h
 
-1379599256 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
+1382358765 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
-1379597952 c:\users\philipp\workspacec++\astro2\include\planet.h
+1382358769 c:\users\philipp\workspacec++\astro2\include\planet.h
+	<string>
+	"Koord.h"
 
 1379601793 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
 1379601746 c:\users\philipp\workspacec++\astro2\include\hello.h
 
+<<<<<<< HEAD
 1379602762 c:\users\johannes\documents\workspacec++\tutorial\include\koord.h
 
 1379595959 c:\users\johannes\documents\workspacec++\tutorial\include\planet.h
 
 1379602762 c:\users\johannes\documents\workspacec++\tutorial\include\hello.h
+=======
+1379606725 c:\users\philipp\workspacec++\astro2\src\planet.h
+
+1379606725 c:\users\philipp\workspacec++\astro2\src\koord.h
+
+1381161551 c:\users\philipp\workspacec++\astro2\koord.cpp
+	"Koord.h"
+
+1379606725 c:\users\philipp\workspacec++\astro2\koord.h
+
+1379597952 c:\users\philipp\workspacec++\astro2\planet.h
+
+1379601746 c:\users\philipp\workspacec++\astro2\hello.h
+>>>>>>> origin/master
 

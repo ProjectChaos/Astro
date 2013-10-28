@@ -7,8 +7,12 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
+
+
 using namespace std;
 using std::cin;
+
+int globalTime =0;
 
 double abs(double c){
 if(c<0){
@@ -86,6 +90,7 @@ string dezToBin(){
     return output;
 
     }
+
 double abstand(Koord a, Koord b){
 int x1= a.x;
 int x2= b.x;
@@ -103,14 +108,18 @@ int z1= a.z;
 int z2= b.z;
 double r;
 int l;
+l= power(2,(x1-x2)) + power(2,(y1-y2)) + power(2,(z1-z2));
+r=sqrt(l);
+return r;
+}
+<<<<<<< HEAD
 l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
 r=(sqrt(l));
 return r;
 }
-l= ((x1-x2)^2)+((y1-y2)^2)+((z1-z2)^2);
-r=(sqrt(l));
-return r;
-}
+=======
+
+>>>>>>> origin/master
 //int convertstringtoint(string str){
 //char bin[]= str;
 //int i = atoi( bin );
@@ -118,11 +127,45 @@ return r;
 //
 //}
 //int binToDez
+double abstandP(Planet a, Planet b){
+        return abstand(a.getK(), b.getK());
+}
+
+
+//stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
+void stepper(Planet pa, Planet pb){
+while(globalTime<50){
+    cout << globalTime << endl;
+    pa.bewegen();
+    pb.bewegen();
+    cout << abstandP(pa,pb) <<endl;
+    globalTime++;
+        }
+}
+
 int main()
 {
-    Koord k1,k2;
+    Koord k1;
+    Koord k2;// k1,k2;
     k1.setKoord(0,0,0);
-    k2.setKoord(2,2,2);
+    k2.setKoord(1,2,3);
+
+    Planet earth;
+    Planet mars;
+    earth.setK(k1);
+    earth.setName("earth");
+    earth.setEarthMass(1);
+    earth.setXAcc(1);
+    earth.setYAcc(2);
+    mars.setK(k2);
+    mars.setName("mars");
+    mars.setEarthMass(0.107);
+    mars.setXAcc(-1);
+    mars.setYAcc(-1);
+
+    //cout << abstand(k1,k2)<< endl;
+    //cout << abstandP(earth,mars);
+
     hello();
     int i =10;
     while(i>0){
@@ -134,7 +177,7 @@ int main()
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
@@ -145,7 +188,7 @@ dezToBin();
 
 }
 if(selection1=="c"){
-    abstand(k1,k2);
+stepper(earth,mars);
 }
 if(selection1=="x"){double abstand(Koord a, Koord b){
 int x1= a.x;
