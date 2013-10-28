@@ -21,19 +21,19 @@
 	"Planet.h"
 	"hello.h"
 
-1381250606 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
+1381247006 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"
 
-1381251000 c:\users\philipp\workspacec++\astro2\include\koord.h
+1381247400 c:\users\philipp\workspacec++\astro2\include\koord.h
 
-1382358765 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
+1382355165 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
-1382358769 c:\users\philipp\workspacec++\astro2\include\planet.h
+1382355169 c:\users\philipp\workspacec++\astro2\include\planet.h
 	<string>
 	"Koord.h"
 
-1379601793 source:c:\users\philipp\workspacec++\astro2\hello.cpp
+1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
 1379601746 c:\users\philipp\workspacec++\astro2\include\hello.h

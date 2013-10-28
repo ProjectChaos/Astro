@@ -91,8 +91,12 @@ string dezToBin(){
 
     }
 
+<<<<<<< HEAD
 
 int l;double abstand(Koord a, Koord b){
+=======
+double abstand(Koord a, Koord b){
+>>>>>>> origin/master
 int x1= a.x;
 int x2= b.x;
 int y1= a.y;
