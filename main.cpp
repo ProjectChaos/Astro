@@ -13,12 +13,12 @@ using namespace std;
 using std::cin;
 
 int globalTime =0;
-long long abs(long long c){
-if (c<0){
-    c=-1*c;
-}
-    return c;
-}
+//double abs(double c){
+//if (c<0){
+//    c=-1*c;
+//}
+//    return c;
+//}
 double abs(double c){
 if(c<0){
     c=-1*c;
@@ -126,8 +126,9 @@ double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
-int massDiff(Planet a, Planet b){
-return abs((a.getMass()-b.getMass()));
+double massDiff(Planet a, Planet b){
+    return (a.getMass()-b.getMass());
+//return abs((a.getMass()-b.getMass()));
 }
 
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
@@ -163,12 +164,16 @@ int main()
     mars.setXAcc(-1);
     mars.setYAcc(-1);
 
+    long double testa=5972190000000;
+    long double testb=641850000000;
+    long double testc=(testa-testb);
     //cout << abstand(k1,k2)<< endl;
     //cout << abstandP(earth,mars);
 
     hello();
     int i =10;
     while(i>0){
+    cout << testc << endl;
     cout << endl << endl <<endl;
     cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;

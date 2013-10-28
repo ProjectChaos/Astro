@@ -12,6 +12,7 @@ class Hochzahl
         int getOrdnung() { return ordnung; }
         void SetOrdnung(int val) { ordnung = val; }
 
+
         double faktor;
         int ordnung;
 };

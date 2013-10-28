@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1382963820 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
+1382967664 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -42,7 +42,7 @@
 
 1382954689 c:\users\johannes\documents\workspacec++\tutorial\include\koord.h
 
-1382963856 c:\users\johannes\documents\workspacec++\tutorial\include\planet.h
+1382966612 c:\users\johannes\documents\workspacec++\tutorial\include\planet.h
 	<string>
 	"Koord.h"
 
@@ -71,4 +71,9 @@
 
 1382954689 source:c:\users\johannes\documents\workspacec++\tutorial\src\planet.cpp
 	"Planet.h"
+
+1382964165 source:c:\users\johannes\documents\workspacec++\tutorial\src\hochzahl.cpp
+	"Hochzahl.h"
+
+1382966612 c:\users\johannes\documents\workspacec++\tutorial\include\hochzahl.h
 
