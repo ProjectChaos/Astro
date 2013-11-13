@@ -7,19 +7,14 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
-#include "Test.h"
 
 
 using namespace std;
 using std::cin;
 
 int globalTime =0;
-long long abs(long long c){
-if (c<0){
-    c=-1*c;
-}
-    return c;
-}
+long gravcon_M = 398600420000000;
+
 double abs(double c){
 if(c<0){
     c=-1*c;
@@ -97,12 +92,7 @@ string dezToBin(){
 
     }
 
-
-
-
-
 double abstand(Koord a, Koord b){
-
 int x1= a.x;
 int x2= b.x;
 int y1= a.y;
@@ -127,53 +117,34 @@ double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
-int massDiff(Planet a, Planet b){
-return abs((a.getMass()-b.getMass()));
-}
-
+//r(t)= r(0)+dr/dt *t + 1/2 d^2r/dt^2 * t^2
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
 void stepper(Planet pa, Planet pb){
-while(globalTime<50){
-    cout << globalTime << endl;
-    pa.bewegen();
-    pb.bewegen();
-    cout << abstandP(pa,pb) <<endl;
-    globalTime++;
+    int time=0;
+while(time<50){
+    cout << "Zeitpunkt" << time << endl;
+    pa.konstantBewegen(time);
+    pb.konstantBewegen(time);
+    cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
+    time++;
+
         }
 }
 
 int main()
+
 {
-    Koord k1;
-    Koord k2;// k1,k2;
-    k1.setKoord(0,0,0);
-    k2.setKoord(1,2,3);
+    Koord k1(0,0,0);
+    Koord k2(1,2,3);
+    Koord k3(10,10,10);
 
-    Planet earth;
-    Planet mars;
-    earth.setK(k1);
-    earth.setName("earth");
-    earth.setEarthMass(1);
-    earth.setMass(5972190000000000000000000);
-    earth.setXAcc(1);
-    earth.setYAcc(2);
-    mars.setK(k2);
-    mars.setName("mars");
-    mars.setEarthMass(0.107);
-    mars.setMass(641850000000000000000000);
-    mars.setXAcc(-1);
-    mars.setYAcc(-1);
 
-    //Konstriktor Funktioniert jetzt
-    //erst Klassenname
-    //Dann name fuer das Objekt, Klammer mit werten
-    Test test1 (1,2,3.0,"blatest");
-    cout << test1.Gettest4();
-
-    //cout << abstand(k1,k2)<< endl;
-    //cout << abstandP(earth,mars);
+    Planet earth("earth", k1, 1,1,2,0,0);
+    Planet mars("mars", k2, 0.107, -1, -1,0,0);
+    Planet venus("venus", k3, 0.8, 50, 50,0,0);
 
     hello();
+
     int i =10;
     while(i>0){
     cout << endl << endl <<endl;
@@ -184,12 +155,7 @@ int main()
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
-    << "(a) Wurzel ziehen" <<endl
-    << "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
-    <<"(c) Planetensimulation starten"<<endl
-    <<"(d) Massendifferenz"<<endl
-    << "(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
@@ -201,12 +167,9 @@ dezToBin();
 }
 if(selection1=="c"){
 stepper(earth,mars);
+stepper(earth,venus);
+stepper(mars,venus);
 }
-if(selection1=="d"){
-massDiff(earth,mars);
-cout<<massDiff(earth,mars)<<endl;
-}
-
 if(selection1=="x"){
     return 0;
 }

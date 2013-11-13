@@ -1,5 +1,8 @@
 # depslib dependency file v1.0
-1382967664 source:c:\users\johannes\documents\workspacec++\tutorial\main.cpp
+1379598193 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\hello.cpp
+	<iostream>
+
+1382355425 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -10,70 +13,45 @@
 	"Planet.h"
 	"hello.h"
 
-1382960980 source:c:\users\philipp\workspacec++\astro2\main.cpp
-	<iostream>
-	<conio.h>
-	<math.h>
-	<sstream>
-	<string>
-	<stdlib.h>
-	"Koord.h"
-	"Planet.h"
-	"hello.h"
+1384167526 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\koord.h
 
-1381247006 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
-	"Koord.h"
-
-1381247400 c:\users\philipp\workspacec++\astro2\include\koord.h
-
-1382355165 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
-	"Planet.h"
-
-1382355169 c:\users\philipp\workspacec++\astro2\include\planet.h
+1384171724 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\planet.h
 	<string>
 	"Koord.h"
+
+1379598146 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\hello.h
+
+1384167554 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\src\koord.cpp
+	"Koord.h"
+
+1384171922 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\src\planet.cpp
+	"Planet.h"
 
 1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
-1379598146 c:\users\philipp\workspacec++\astro2\include\hello.h
+1384172044 source:c:\users\philipp\workspacec++\astro2\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
+	<stdlib.h>
+	"Koord.h"
+	"Planet.h"
+	"hello.h"
 
-1379601746 D
+1384167526 c:\users\philipp\workspacec++\astro2\include\koord.h
 
-1382954689 c:\users\johannes\documents\workspacec++\tutorial\include\koord.h
-
-1382966612 c:\users\johannes\documents\workspacec++\tutorial\include\planet.h
+1384171724 c:\users\philipp\workspacec++\astro2\include\planet.h
 	<string>
 	"Koord.h"
 
-1379599162 c:\users\johannes\documents\workspacec++\tutorial\include\hello.h
+1379598146 c:\users\philipp\workspacec++\astro2\include\hello.h
 
-1379606725 c:\users\philipp\workspacec++\astro2\src\planet.h
-
-1379606725 c:\users\philipp\workspacec++\astro2\src\koord.h
-
-1381161551 c:\users\philipp\workspacec++\astro2\koord.cpp
+1384167554 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
 	"Koord.h"
 
-1379606725 c:\users\philipp\workspacec++\astro2\koord.h
-
-1379597952 c:\users\philipp\workspacec++\astro2\planet.h
-
-1379601746 c:\users\philipp\workspacec++\astro2\hello.h
-
-1379601746 gin/master
-
-1379599162 source:c:\users\johannes\documents\workspacec++\tutorial\hello.cpp
-	<iostream>
-
-1382954689 source:c:\users\johannes\documents\workspacec++\tutorial\src\koord.cpp
-	"Koord.h"
-
-1382954689 source:c:\users\johannes\documents\workspacec++\tutorial\src\planet.cpp
+1384171922 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
-
-1382964165 source:c:\users\johannes\documents\workspacec++\tutorial\src\hochzahl.cpp
-	"Hochzahl.h"
-
-1382966612 c:\users\johannes\documents\workspacec++\tutorial\include\hochzahl.h
 

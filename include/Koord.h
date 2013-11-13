@@ -6,7 +6,9 @@ class Koord
 {
     public:
         Koord();
+        Koord(int, int, int);
         ~Koord();
+
         int getX() { return x; }
         void setX(int val) { x = val; }
         int getY() { return y; }
