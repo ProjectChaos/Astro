@@ -2,7 +2,7 @@
 1379594593 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
 	<iostream>
 
-1382351825 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
+1386600225 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -15,7 +15,7 @@
 
 1384170093 c:\users\johannes\documents\workspacec++\astro\include\koord.h
 
-1384170093 c:\users\johannes\documents\workspacec++\astro\include\planet.h
+1386593234 c:\users\johannes\documents\workspacec++\astro\include\planet.h
 	<string>
 	"Koord.h"
 
@@ -24,6 +24,6 @@
 1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\koord.cpp
 	"Koord.h"
 
-1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\planet.cpp
+1386593452 source:c:\users\johannes\documents\workspacec++\astro\src\planet.cpp
 	"Planet.h"
 

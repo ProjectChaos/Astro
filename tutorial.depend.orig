@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+<<<<<<< HEAD
+1379594593 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
+	<iostream>
+
+1382351825 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
+=======
+1379598193 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\hello.cpp
+	<iostream>
+
+1382355425 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\main.cpp
+>>>>>>> origin/master
+	<iostream>
+	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
+	<stdlib.h>
+	"Koord.h"
+	"Planet.h"
+	"hello.h"
+
+<<<<<<< HEAD
+1384170093 c:\users\johannes\documents\workspacec++\astro\include\koord.h
+
+1384170093 c:\users\johannes\documents\workspacec++\astro\include\planet.h
+	<string>
+	"Koord.h"
+
+1379594546 c:\users\johannes\documents\workspacec++\astro\include\hello.h
+
+1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\koord.cpp
+	"Koord.h"
+
+1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\planet.cpp
+=======
+1384167526 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\koord.h
+
+1384171724 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\planet.h
+	<string>
+	"Koord.h"
+
+1379598146 c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\include\hello.h
+
+1384167554 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\src\koord.cpp
+	"Koord.h"
+
+1384171922 source:c:\users\philipp\dropbox\jo astro projekt\project files\philipp commit\src\planet.cpp
+	"Planet.h"
+
+1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
+	<iostream>
+
+1384172044 source:c:\users\philipp\workspacec++\astro2\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
+	<stdlib.h>
+	"Koord.h"
+	"Planet.h"
+	"hello.h"
+
+1384167526 c:\users\philipp\workspacec++\astro2\include\koord.h
+
+1384171724 c:\users\philipp\workspacec++\astro2\include\planet.h
+	<string>
+	"Koord.h"
+
+1379598146 c:\users\philipp\workspacec++\astro2\include\hello.h
+
+1384167554 source:c:\users\philipp\workspacec++\astro2\src\koord.cpp
+	"Koord.h"
+
+1384171922 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
+>>>>>>> origin/master
+	"Planet.h"
+
