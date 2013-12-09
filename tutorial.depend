@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1379594593 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
+	<iostream>
+
+1382351825 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<sstream>
+	<string>
+	<stdlib.h>
+	"Koord.h"
+	"Planet.h"
+	"hello.h"
+
+1384170093 c:\users\johannes\documents\workspacec++\astro\include\koord.h
+
+1384170093 c:\users\johannes\documents\workspacec++\astro\include\planet.h
+	<string>
+	"Koord.h"
+
+1379594546 c:\users\johannes\documents\workspacec++\astro\include\hello.h
+
+1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\koord.cpp
+	"Koord.h"
+
+1384170093 source:c:\users\johannes\documents\workspacec++\astro\src\planet.cpp
+	"Planet.h"
+
