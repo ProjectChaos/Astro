@@ -117,16 +117,17 @@ double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
-
+//r(t)= r(0)+dr/dt *t + 1/2 d^2r/dt^2 * t^2
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
 void stepper(Planet pa, Planet pb){
     int time=0;
 while(time<50){
     cout << "Zeitpunkt" << time << endl;
-    pa.bewegen();
-    pb.bewegen();
+    pa.konstantBewegen(time);
+    pb.konstantBewegen(time);
     cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
     time++;
+
         }
 }
 
@@ -137,17 +138,12 @@ int main()
     Koord k2(1,2,3);
     Koord k3(10,10,10);
 
-    Planet earth("earth", k1, 1,1,2);
-    Planet mars("mars", k2, 0.107, -1, -1);
-    Planet venus("venus", k3, 0.8, 50, 50);
 
-
-
+    Planet earth("earth", k1, 1,1,2,0,0);
+    Planet mars("mars", k2, 0.107, -1, -1,0,0);
+    Planet venus("venus", k3, 0.8, 50, 50,0,0);
 
     hello();
-
-
-
 
     int i =10;
     while(i>0){

@@ -1,5 +1,4 @@
 //file Planet.h
-
 #ifndef PLANET_H
 #define PLANET_H
 #include <string>
@@ -13,7 +12,6 @@ class Planet
     public:
         Planet();
         Planet(std::string, Koord, double, double, double, double, double);
-
         ~Planet();
 
         std::string getName() { return name; }
@@ -35,7 +33,6 @@ class Planet
 
         Koord r0;
 
-
         double earthMass;
         double xAcc;
         double yAcc;
@@ -46,7 +43,6 @@ class Planet
         void konstantBewegen(int i){
             double xkoord = r0.getX() + v0X*i + 0.5 * xAcc * (i*i);
             double ykoord = r0.getY() + v0Y*i + 0.5 * yAcc * (i*i);
-
             k.setX(xkoord);
             k.setY(ykoord);
         }
