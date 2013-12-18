@@ -31,7 +31,7 @@
 1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
-1387359505 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1387369016 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -42,6 +42,8 @@
 	"Planet.h"
 	"hello.h"
 	"Ellipse.h"
+	<iostream>
+	<fstream>
 
 1384167526 c:\users\philipp\workspacec++\astro2\include\koord.h
 
@@ -57,7 +59,7 @@
 1384171922 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
-1387358993 source:c:\users\philipp\workspacec++\astro2\src\ellipse.cpp
+1387368731 source:c:\users\philipp\workspacec++\astro2\src\ellipse.cpp
 	"Ellipse.h"
 	"math.h"
 	<vector>
