@@ -128,12 +128,44 @@ while(time<50){
         }
 }
 
-void writeEllipseCSV(Ellipse e){
-    ofstream myfile;
-    myfile.open("test.csv", std::ios_base::app);
-    myfile << "A new line. \n";
-    myfile.close();
-    cout << "saved in CSV-File" <<endl;
+void writeEllipseCSV(vector<double> v){
+    std::ofstream myfile;
+    //ersetzt jetzt wieder, std::ios_base::app einkommentieren wenn er wieder nr anfügen soll
+    string fileToOpen ="test.csv";
+    myfile.open("test.csv");//, std::ios_base::app);
+    int i=0;
+    int j=v.size();//größe unseres eingabevektors
+    int appendStreamOpen = 0; //um rechnenzeit zu sparen öfnnen wir nur einen append stream
+    while(i<j){
+        //erster Schritt, file im Überschreibenmodus noch geöffnet
+        if(i==0){
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;//i=2
+        }
+        //zweiter schritt, datei im
+        if(appendStreamOpen<1){
+        myfile.open("test.csv", std::ios_base::app);
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        appendStreamOpen=1;
+        }
+        //Der letzte schreibschritt, vektor ist fast fertig
+        if((i==(j-2))){
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        myfile.close();
+        cout << "saved in CSV-File" <<endl;
+
+        }
+        else{
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        }
+        }
     }
 
 double ellipse(){
@@ -212,8 +244,8 @@ if(selection1=="d"){
     ellipse();
 }
 if(selection1=="f"){
-    Ellipse e1(2.5,3.5);//kl dann große halbachse
-    writeEllipseCSV(e1);
+  //  Ellipse e1(2.5,3.5);//kl dann große halbachse
+    writeEllipseCSV();
 }
 if(selection1=="x"){
     return 0;
