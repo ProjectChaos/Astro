@@ -227,7 +227,7 @@ while(t<=e){
        }
     else{
         //bereich 1-199
-        x=-a+(t*a)/100;
+        x=-a+(t*a)*2/e;
         y=b*sqrt((1-((pow(x,2))/pow(a,2))));
         cout<< x << "\t" <<y<< endl;
 
