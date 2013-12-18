@@ -9,6 +9,9 @@
 #include "hello.h"
 #include "Ellipse.h"
 
+#include <iostream>
+#include <fstream>
+
 
 using namespace std;
 using std::cin;
@@ -107,13 +110,6 @@ r=sqrt(l);
 return r;
 }
 
-//int convertstringtoint(string str){
-//char bin[]= str;
-//int i = atoi( bin );
-//return i;
-//
-//}
-//int binToDez
 double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
@@ -133,43 +129,16 @@ while(time<50){
 }
 
 void writeEllipseCSV(Ellipse e){
-    //Read CSV using a vector of vector of string
-std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
-  std::string csvLine;
-  std::vector<std::vector<std::string> > data;
-
-  while( std::getline(input, csvLine) ){
-    std::istringstream csvStream(csvLine);
-    std::vector<std::string> csvRow;
-    std::string csvCol;
-
-    while( std::getline(csvStream, csvCol, ',') )
-      csvRow.push_back(csvCol);
-    data.push_back(csvRow);
-  }
-  return data;
-}
-
-//Modify Data by accessing  elements of data[row][col]
-//Add new data using push_back ref. loadCsv function
-
-// Finally update
- void saveCSV(std::ostream &output,const std::vector<std::vector<std::string> >& data){
-  if(!data.size())
-    return;
-  std::vector<std::vector<std::string> >::const_iterator i=data.begin();
-  for(; i != data.end(); ++i){
-    std::vector<std::string> row =*i;
-        if(!row.size())
-            continue;
-    std::vector<std::string>::const_iterator j=row.begin();
-    output<<*(j++);
-    for(;i != row.end();++j)
-        output<<','<<*j;
-    output<<std::endl;
-  }
-}
+    ofstream myfile;
+    myfile.open("test.csv", std::ios_base::app);
+    myfile << "A new line. \n";
+    myfile.close();
+    cout << "saved in CSV-File" <<endl;
     }
+
+
+
+
 int main()
 
 {
@@ -199,6 +168,7 @@ cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
 << "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
 <<"(c) Planetensimulation starten"<<endl
 << "(d)Ellipse berechnen"<<endl
+<< "(f) CSV-Schreiben"<<endl
 <<"(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
@@ -214,9 +184,14 @@ stepper(earth,mars);
 stepper(earth,venus);
 stepper(mars,venus);
 }
+if(selection1=="f"){
+    Ellipse e1(2.5,3.5);//kl dann groﬂe halbachse
+    writeEllipseCSV(e1);
+}
 if(selection1=="x"){
     return 0;
 }
+
 i--;
 }
 getch();

@@ -36,13 +36,17 @@
 		</Compiler>
 		<Unit filename="hello.cpp" />
 		<Unit filename="include/Ellipse.h" />
+		<Unit filename="include/Hochzahl.h" />
 		<Unit filename="include/Koord.h" />
 		<Unit filename="include/Planet.h" />
+		<Unit filename="include/Test.h" />
 		<Unit filename="include/hello.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Ellipse.cpp" />
+		<Unit filename="src/Hochzahl.cpp" />
 		<Unit filename="src/Koord.cpp" />
 		<Unit filename="src/Planet.cpp" />
+		<Unit filename="src/Test.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
