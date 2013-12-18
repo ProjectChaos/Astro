@@ -142,6 +142,7 @@ void writeEllipseCSV(vector<double> v){
         myfile <<v[i]<<" "<<v[i+1]<<" \n";
         i++;
         i++;//i=2
+        myfile.close();
         }
         //zweiter schritt, datei im
         if(appendStreamOpen<1){
