@@ -35,10 +35,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="hello.cpp" />
+		<Unit filename="include/Ellipse.h" />
 		<Unit filename="include/Koord.h" />
 		<Unit filename="include/Planet.h" />
 		<Unit filename="include/hello.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Ellipse.cpp" />
 		<Unit filename="src/Koord.cpp" />
 		<Unit filename="src/Planet.cpp" />
 		<Extensions>
