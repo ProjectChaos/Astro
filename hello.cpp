@@ -3,7 +3,7 @@
 using namespace std;
 
 void hello(){
-    cout << "Hello from hello.ccp" << "\n";
+    cout << "Projekt Chaos/Astro" << "\n";
 }
 void dezString(){
  cout << "*******************************************************"<< endl ;

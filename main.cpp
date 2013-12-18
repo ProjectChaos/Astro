@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
@@ -10,8 +11,13 @@
 #include "hello.h"
 #include "Ellipse.h"
 
+
 #include <iostream>
 #include <fstream>
+
+#define green  2
+#define red    4
+#define blue   9
 
 
 using namespace std;
@@ -19,6 +25,11 @@ using std::cin;
 
 int globalTime =0;
 long gravcon_M = 398600420000000;
+
+void textcolor(WORD color)
+{
+    SetConsoleTextAttribute(::GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
 
 double abs(double c){
 if(c<0){
@@ -254,10 +265,11 @@ int main()
 
     int i =10;
     while(i>0){
+    textcolor(red);
     cout << endl << endl <<endl;
     cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;
-    cout << "*   xXPROJECTXx CHAOS98 Takes no prisoners RECHNER    *"<<endl;
+    cout << "*  <<<<<<<<        HAUPTAUSWAHL      >>>>>>>>         *"<<endl;
     cout << "*                                                     *"<< endl ;
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
@@ -265,13 +277,14 @@ int main()
 cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
 << "(a) Wurzel ziehen" <<endl
 << "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
-<<"(c) Planetensimulation starten"<<endl
-<< "(d)Ellipse berechnen"<<endl
+<< "(c) Planetensimulation starten"<<endl
+<< "(d) Ellipse berechnen"<<endl
 << "(e) Ellipse Berechnen und in CSV-Schreiben"<<endl
-<<"(f) Gnuplot der CSV"<<endl
-<<"(x)Programm verlassen"<<endl;
+<< "(f) Gnuplot der CSV"<<endl
+<< "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
+textcolor(green);
 if(selection1=="a"){
     wurzelinout();
 }

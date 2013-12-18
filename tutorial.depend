@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1379594593 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
+1387382508 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
 	<iostream>
 
-1387374523 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
+1387383982 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
 	<iostream>
+	<windows.h>
+	<stdio.h>
 	<conio.h>
 	<math.h>
 	<sstream>
