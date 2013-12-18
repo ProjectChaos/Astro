@@ -310,6 +310,7 @@ if(selection1=="f"){
         fprintf(pipe, "%s\n", "e");
         fflush(pipe);
         _pclose(pipe);
+
     }*/
 }
 if(selection1=="x"){
