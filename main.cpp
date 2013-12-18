@@ -131,7 +131,7 @@ while(time<50){
 
         }
 }
-/*
+
 void writeEllipseCSV(Ellipse e){
     //Read CSV using a vector of vector of string
 std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
@@ -169,7 +169,7 @@ std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
     output<<std::endl;
   }
 }
-    }*/
+    }
 int main()
 
 {
