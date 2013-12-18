@@ -142,6 +142,7 @@ void writeEllipseCSV(vector<double> v){
         myfile <<v[i]<<" "<<v[i+1]<<" \n";
         i++;
         i++;//i=2
+        myfile.close();
         }
         //zweiter schritt, datei im
         if(appendStreamOpen<1){
@@ -286,7 +287,7 @@ if(selection1=="d"){
 }
 if(selection1=="f"){
   //  Ellipse e1(2.5,3.5);//kl dann große halbachse
-    writeEllipseCSV();
+    writeEllipseCSV(ellipse());
 }
 if(selection1=="x"){
     return 0;
