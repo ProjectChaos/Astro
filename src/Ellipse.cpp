@@ -28,7 +28,8 @@ Ellipse::Ellipse(double b, double a){
 }
 vector<double> punkteBerechnen(){
             int i= 0;
-            double x=-gHA;
+            double gHA,a,kHA = 0; //temporäre initalisierung
+            double x=(-1*gHA);
             double y1;
             double y2;
             std::vector<double> v;
@@ -46,6 +47,7 @@ vector<double> punkteBerechnen(){
                 i++;
             }
             else{
+                double kHA=0;
                 x=-gHA+(i*gHA)/100;
                 y1=kHA*sqrt((1-((pow(x,2))/pow(a,2)) ));
                 y2=-y1;
