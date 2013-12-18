@@ -136,29 +136,60 @@ void writeEllipseCSV(Ellipse e){
     cout << "saved in CSV-File" <<endl;
     }
 
-double ellipse(){
-double a,b,t,y,x;
+vector<double> ellipse(){
+double a,b,y,x;
+int t,e;
+int j=0;//stellelaufvariable fr vktor, hier wird immer eingefügt
+
 cout << "Ellipsenberechnung" << endl;
 cin >> a;
 cin >> b;
+cin >> e;
+int vektorgr = 4*e+4;
+std::vector<double> v(vektorgr);
 t=0;
-while(t<=200){if (t==0){
-        x=-a;
-       y=0;
-       cout<< x <<  "\t"  << y << endl;
-    }
-    if (t==200){
+while(t<=e){
+    if (t==0){
         x=-a;
         y=0;
-       cout<< x <<  "\t"  << y << endl;    }
+        cout<< x <<  "\t"  << y << endl;
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
+        t++;
+    }
+    if (t==e){
+
+        x=a;
+        y=0;
+       cout<< x <<  "\t"  << y << endl;
+       v[j]=x;
+       j++;
+       v[j]=y;
+       j++;
+       t++;
+       }
     else{
+        //bereich 1-199
         x=-a+(t*a)/100;
         y=b*sqrt((1-((pow(x,2))/pow(a,2))));
         cout<< x << "\t" <<y<< endl;
+
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
         y*=-1;
-       cout<< x<< "\t" << y << endl;
-    }t++;}
-return 0;
+        cout<< x<< "\t" << y << endl;
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
+        t++;
+        }
+}
+return v;
  }
 
 
