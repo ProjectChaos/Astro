@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <conio.h>
 #include <math.h>
 #include <sstream>
@@ -127,7 +128,7 @@ while(time<50){
 
         }
 }
-
+//Schreibt in test.csv den Inhalt des input-vectors
 void writeEllipseCSV(vector<double> v){
     std::ofstream myfile;
     //ersetzt jetzt wieder, std::ios_base::app einkommentieren wenn er wieder nr anfügen soll
@@ -266,7 +267,8 @@ cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
 << "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
 <<"(c) Planetensimulation starten"<<endl
 << "(d)Ellipse berechnen"<<endl
-<< "(f) CSV-Schreiben"<<endl
+<< "(e) Ellipse Berechnen und in CSV-Schreiben"<<endl
+<<"(f) Gnuplot der CSV"<<endl
 <<"(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
@@ -285,9 +287,17 @@ stepper(mars,venus);
 if(selection1=="d"){
     ellipse();
 }
-if(selection1=="f"){
-  //  Ellipse e1(2.5,3.5);//kl dann große halbachse
+if(selection1=="e"){
     writeEllipseCSV(ellipse());
+}
+if(selection1=="f"){
+    /*_popen('pgnuplot -persist -e filename='text.csv'" ', "w");
+    if (pipe != NULL){
+        fprintf(pipe, "plot 'C:\Users\Philipp\workspacec++\Astro2\test.csv'");
+        fprintf(pipe, "%s\n", "e");
+        fflush(pipe);
+        _pclose(pipe);
+    }*/
 }
 if(selection1=="x"){
     return 0;
