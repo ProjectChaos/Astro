@@ -286,7 +286,7 @@ if(selection1=="d"){
 }
 if(selection1=="f"){
   //  Ellipse e1(2.5,3.5);//kl dann groﬂe halbachse
-    writeEllipseCSV();
+    writeEllipseCSV(ellipse());
 }
 if(selection1=="x"){
     return 0;
