@@ -140,10 +140,20 @@ vector<double> ellipse(){
 double a,b,y,x;
 int t,e;
 int j=0;//stellelaufvariable fr vktor, hier wird immer eingefügt
+    cout << "*******************************************************"<< endl ;
+    cout << "*                                                     *"<< endl ;
+    cout << "*        >>>>>>Ellipsenberechnung<<<<<<               *" << endl;
+    cout << "*                                                     *"<< endl ;
+    cout << "*******************************************************"<< endl << endl;
 
-cout << "Ellipsenberechnung" << endl;
+cout << "Geben sie die Laenge der grossen Halbachse an" << endl;
+cout << "a=";
 cin >> a;
+cout << "Geben sie die Laenge der kleinen Halbachse an" << endl;
+cout << "b=";
 cin >> b;
+cout << "Waehlen sie die gewuenschte Aufloesung" << endl;
+cout << "e=";
 cin >> e;
 int vektorgr = 4*e+4;
 std::vector<double> v(vektorgr);
