@@ -136,6 +136,30 @@ void writeEllipseCSV(Ellipse e){
     cout << "saved in CSV-File" <<endl;
     }
 
+double ellipse(){
+double a,b,t,y,x;
+cout << "Ellipsenberechnung" << endl;
+cin >> a;
+cin >> b;
+t=0;
+while(t<=200){if (t==0){
+        x=-a;
+       y=0;
+       cout<< x <<  "\t"  << y << endl;
+    }
+    if (t==200){
+        x=-a;
+        y=0;
+       cout<< x <<  "\t"  << y << endl;    }
+    else{
+        x=-a+(t*a)/100;
+        y=b*sqrt((1-((pow(x,2))/pow(a,2))));
+        cout<< x << "\t" <<y<< endl;
+        y*=-1;
+       cout<< x<< "\t" << y << endl;
+    }t++;}
+return 0;
+ }
 
 
 
@@ -183,6 +207,9 @@ if(selection1=="c"){
 stepper(earth,mars);
 stepper(earth,venus);
 stepper(mars,venus);
+}
+if(selection1=="d"){
+    ellipse();
 }
 if(selection1=="f"){
     Ellipse e1(2.5,3.5);//kl dann große halbachse
