@@ -117,58 +117,31 @@ double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
+<<<<<<< HEAD
+
+=======
 //r(t)= r(0)+dr/dt *t + 1/2 d^2r/dt^2 * t^2
+>>>>>>> origin/master
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
 void stepper(Planet pa, Planet pb){
     int time=0;
 while(time<50){
     cout << "Zeitpunkt" << time << endl;
+<<<<<<< HEAD
+    pa.bewegen();
+    pb.bewegen();
+    cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
+    time++;
+=======
     pa.konstantBewegen(time);
     pb.konstantBewegen(time);
     cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
     time++;
 
+>>>>>>> origin/master
         }
 }
 
-void writeEllipseCSV(Ellipse e){
-    /*Read CSV using a vector of vector of string */
-std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
-  std::string csvLine;
-  std::vector<std::vector<std::string> > data;
-
-  while( std::getline(input, csvLine) ){
-    std::istringstream csvStream(csvLine);
-    std::vector<std::string> csvRow;
-    std::string csvCol;
-
-    while( std::getline(csvStream, csvCol, ',') )
-      csvRow.push_back(csvCol);
-    data.push_back(csvRow);
-  }
-  return data;
-}
-
-/*Modify Data by accessing  elements of data[row][col]*/
-/*Add new data using push_back ref. loadCsv function */
-
-/* Finally update */
- void saveCSV(std::ostream &output,const std::vector<std::vector<std::string> >& data){
-  if(!data.size())
-    return;
-  std::vector<std::vector<std::string> >::const_iterator i=data.begin();
-  for(; i != data.end(); ++i){
-    std::vector<std::string> row =*i;
-        if(!row.size())
-            continue;
-    std::vector<std::string>::const_iterator j=row.begin();
-    output<<*(j++);
-    for(;i != row.end();++j)
-        output<<','<<*j;
-    output<<std::endl;
-  }
-}
-    }
 int main()
 
 {
@@ -176,6 +149,20 @@ int main()
     Koord k2(1,2,3);
     Koord k3(10,10,10);
 
+<<<<<<< HEAD
+    Planet earth("earth", k1, 1,1,2);
+    Planet mars("mars", k2, 0.107, -1, -1);
+    Planet venus("venus", k3, 0.8, 50, 50);
+
+
+
+
+    hello();
+
+
+
+
+=======
 
     Planet earth("earth", k1, 1,1,2,0,0);
     Planet mars("mars", k2, 0.107, -1, -1,0,0);
@@ -183,6 +170,7 @@ int main()
 
     hello();
 
+>>>>>>> origin/master
     int i =10;
     while(i>0){
     cout << endl << endl <<endl;
@@ -193,12 +181,7 @@ int main()
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
-<< "(a) Wurzel ziehen" <<endl
-<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
-<<"(c) Planetensimulation starten"<<endl
-<< "(d)Ellipse berechnen"<<endl
-<<"(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
 string selection1;
 cin >> selection1;
 if(selection1=="a"){
