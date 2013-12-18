@@ -55,3 +55,30 @@
 1384171922 source:c:\users\philipp\workspacec++\astro2\src\planet.cpp
 	"Planet.h"
 
+1387358993 source:c:\users\philipp\workspacec++\astro2\src\ellipse.cpp
+	"Ellipse.h"
+	"math.h"
+	<vector>
+	<iostream>
+	<sstream>
+	<string>
+	<conio.h>
+
+1387358993 c:\users\philipp\workspacec++\astro2\include\ellipse.h
+	<vector>
+	<iostream>
+	<sstream>
+	<string>
+	<conio.h>
+
+1382965154 source:c:\users\philipp\workspacec++\astro2\src\hochzahl.cpp
+	"Hochzahl.h"
+
+1382970490 c:\users\philipp\workspacec++\astro2\include\hochzahl.h
+
+1382967997 source:c:\users\philipp\workspacec++\astro2\src\test.cpp
+	"Test.h"
+
+1382969947 c:\users\philipp\workspacec++\astro2\include\test.h
+	<string>
+

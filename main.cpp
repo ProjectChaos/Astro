@@ -7,6 +7,7 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
+#include "Ellipse.h"
 
 
 using namespace std;
@@ -130,9 +131,9 @@ while(time<50){
 
         }
 }
-
+/*
 void writeEllipseCSV(Ellipse e){
-    /*Read CSV using a vector of vector of string */
+    //Read CSV using a vector of vector of string
 std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
   std::string csvLine;
   std::vector<std::vector<std::string> > data;
@@ -149,10 +150,10 @@ std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
   return data;
 }
 
-/*Modify Data by accessing  elements of data[row][col]*/
-/*Add new data using push_back ref. loadCsv function */
+//Modify Data by accessing  elements of data[row][col]
+//Add new data using push_back ref. loadCsv function
 
-/* Finally update */
+// Finally update
  void saveCSV(std::ostream &output,const std::vector<std::vector<std::string> >& data){
   if(!data.size())
     return;
@@ -168,7 +169,7 @@ std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
     output<<std::endl;
   }
 }
-    }
+    }*/
 int main()
 
 {
