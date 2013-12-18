@@ -32,11 +32,13 @@
 1386593452 source:c:\users\johannes\documents\workspacec++\astro\src\planet.cpp
 	"Planet.h"
 
-1379598193 source:c:\users\philipp\workspacec++\astro2\hello.cpp
+1387384397 source:c:\users\philipp\workspacec++\astro2\hello.cpp
 	<iostream>
 
-1387380489 source:c:\users\philipp\workspacec++\astro2\main.cpp
+1387384569 source:c:\users\philipp\workspacec++\astro2\main.cpp
 	<iostream>
+	<windows.h>
+	<stdio.h>
 	<conio.h>
 	<math.h>
 	<sstream>

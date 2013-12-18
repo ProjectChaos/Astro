@@ -1,4 +1,9 @@
 #include <iostream>
+<<<<<<< HEAD
+=======
+#include <windows.h>
+>>>>>>> origin/master
+#include <stdio.h>
 #include <conio.h>
 #include <math.h>
 #include <sstream>
@@ -7,6 +12,15 @@
 #include "Koord.h"
 #include "Planet.h"
 #include "hello.h"
+#include "Ellipse.h"
+
+
+#include <iostream>
+#include <fstream>
+
+#define green  2
+#define red    4
+#define blue   9
 
 
 using namespace std;
@@ -14,6 +28,11 @@ using std::cin;
 
 int globalTime =0;
 long gravcon_M = 398600420000000;
+
+void textcolor(WORD color)
+{
+    SetConsoleTextAttribute(::GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
 
 double abs(double c){
 if(c<0){
@@ -106,41 +125,132 @@ r=sqrt(l);
 return r;
 }
 
-//int convertstringtoint(string str){
-//char bin[]= str;
-//int i = atoi( bin );
-//return i;
-//
-//}
-//int binToDez
 double abstandP(Planet a, Planet b){
         return abstand(a.getK(), b.getK());
 }
 
-<<<<<<< HEAD
-
-=======
 //r(t)= r(0)+dr/dt *t + 1/2 d^2r/dt^2 * t^2
->>>>>>> origin/master
 //stepper berechnet für 50 Zeitschritte den Abstand zwischen 2 planeten
 void stepper(Planet pa, Planet pb){
     int time=0;
 while(time<50){
     cout << "Zeitpunkt" << time << endl;
-<<<<<<< HEAD
-    pa.bewegen();
-    pb.bewegen();
-    cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
-    time++;
-=======
     pa.konstantBewegen(time);
     pb.konstantBewegen(time);
     cout << "Abstand zwischen " <<pa.getName() <<" und "<< pb.getName() <<" betraegt:" << abstandP(pa,pb) <<endl;
     time++;
 
->>>>>>> origin/master
         }
 }
+//Schreibt in test.csv den Inhalt des input-vectors
+void writeEllipseCSV(vector<double> v){
+    std::ofstream myfile;
+    //ersetzt jetzt wieder, std::ios_base::app einkommentieren wenn er wieder nr anfügen soll
+    string fileToOpen ="test.csv";
+    myfile.open("test.csv");//, std::ios_base::app);
+    int i=0;
+    int j=v.size();//größe unseres eingabevektors
+    int appendStreamOpen = 0; //um rechnenzeit zu sparen öfnnen wir nur einen append stream
+    while(i<j){
+        //erster Schritt, file im Überschreibenmodus noch geöffnet
+        if(i==0){
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;//i=2
+        myfile.close();
+        }
+        //zweiter schritt, datei im
+        if(appendStreamOpen<1){
+        myfile.open("test.csv", std::ios_base::app);
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        appendStreamOpen=1;
+        }
+        //Der letzte schreibschritt, vektor ist fast fertig
+        if((i==(j-2))){
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        myfile.close();
+        cout << "saved in CSV-File" <<endl;
+
+        }
+        else{
+        myfile <<v[i]<<" "<<v[i+1]<<" \n";
+        i++;
+        i++;
+        }
+        }
+    }
+
+vector<double> ellipse(){
+double a,b,y,x;
+int t,e;
+int j=0;//stellelaufvariable fr vktor, hier wird immer eingefügt
+    cout << "*******************************************************"<< endl ;
+    cout << "*                                                     *"<< endl ;
+    cout << "*        >>>>>>Ellipsenberechnung<<<<<<               *" << endl;
+    cout << "*                                                     *"<< endl ;
+    cout << "*******************************************************"<< endl << endl;
+
+cout << "Geben sie die Laenge der grossen Halbachse an" << endl;
+cout << "a=";
+cin >> a;
+cout << "Geben sie die Laenge der kleinen Halbachse an" << endl;
+cout << "b=";
+cin >> b;
+cout << "Waehlen sie die gewuenschte Aufloesung" << endl;
+cout << "e=";
+cin >> e;
+int vektorgr = 4*e+4;
+std::vector<double> v(vektorgr);
+t=0;
+while(t<=e){
+    if (t==0){
+        x=-a;
+        y=0;
+        cout<< x <<  "\t"  << y << endl;
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
+        t++;
+    }
+    if (t==e){
+
+        x=a;
+        y=0;
+       cout<< x <<  "\t"  << y << endl;
+       v[j]=x;
+       j++;
+       v[j]=y;
+       j++;
+       t++;
+       }
+    else{
+        //bereich 1-199
+        x=-a+(t*a)/100;
+        y=b*sqrt((1-((pow(x,2))/pow(a,2))));
+        cout<< x << "\t" <<y<< endl;
+
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
+        y*=-1;
+        cout<< x<< "\t" << y << endl;
+        v[j]=x;
+        j++;
+        v[j]=y;
+        j++;
+        t++;
+        }
+}
+return v;
+ }
+
+
 
 int main()
 
@@ -149,20 +259,6 @@ int main()
     Koord k2(1,2,3);
     Koord k3(10,10,10);
 
-<<<<<<< HEAD
-    Planet earth("earth", k1, 1,1,2);
-    Planet mars("mars", k2, 0.107, -1, -1);
-    Planet venus("venus", k3, 0.8, 50, 50);
-
-
-
-
-    hello();
-
-
-
-
-=======
 
     Planet earth("earth", k1, 1,1,2,0,0);
     Planet mars("mars", k2, 0.107, -1, -1,0,0);
@@ -170,20 +266,35 @@ int main()
 
     hello();
 
->>>>>>> origin/master
     int i =10;
     while(i>0){
+    textcolor(red);
     cout << endl << endl <<endl;
     cout << "*******************************************************"<< endl ;
     cout << "*                                                     *"<< endl ;
-    cout << "*   xXPROJECTXx CHAOS98 Takes no prisoners RECHNER    *"<<endl;
+    cout << "*  <<<<<<<<        HAUPTAUSWAHL      >>>>>>>>         *"<<endl;
     cout << "*                                                     *"<< endl ;
     cout << "*******************************************************"<< endl << endl<< endl << endl<< endl << endl;
 
 
-cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl<< "(a) Wurzel ziehen" <<endl<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl<<"(c) Planetensimulation starten"<<endl<< "(x)Programm verlassen"<<endl;
+cout<< "Waehlen Sie die gewuenschte Operation aus" <<endl
+<< "(a) Wurzel ziehen" <<endl
+<< "(b) Dezimalzahl in Binaerzahl umrechnen"<<endl
+<<<<<<< HEAD
+<<"(c) Planetensimulation starten"<<endl
+<< "(d)Ellipse berechnen"<<endl
+<< "(e) Ellipse Berechnen und in CSV-Schreiben"<<endl
+<<"(f) Gnuplot der CSV"<<endl
+<<"(x)Programm verlassen"<<endl;
+=======
+<< "(c) Planetensimulation starten"<<endl
+<< "(d) Ellipse berechnen"<<endl
+<< "(f) CSV-Schreiben"<<endl
+<< "(x)Programm verlassen"<<endl;
+>>>>>>> origin/master
 string selection1;
 cin >> selection1;
+textcolor(green);
 if(selection1=="a"){
     wurzelinout();
 }
@@ -196,9 +307,25 @@ stepper(earth,mars);
 stepper(earth,venus);
 stepper(mars,venus);
 }
+if(selection1=="d"){
+    ellipse();
+}
+if(selection1=="e"){
+    writeEllipseCSV(ellipse());
+}
+if(selection1=="f"){
+    /*_popen('pgnuplot -persist -e filename='text.csv'" ', "w");
+    if (pipe != NULL){
+        fprintf(pipe, "plot 'C:\Users\Philipp\workspacec++\Astro2\test.csv'");
+        fprintf(pipe, "%s\n", "e");
+        fflush(pipe);
+        _pclose(pipe);
+    }*/
+}
 if(selection1=="x"){
     return 0;
 }
+
 i--;
 }
 getch();
