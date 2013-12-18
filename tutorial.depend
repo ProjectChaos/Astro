@@ -2,7 +2,7 @@
 1379594593 source:c:\users\johannes\documents\workspacec++\astro\hello.cpp
 	<iostream>
 
-1386600225 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
+1387367237 source:c:\users\johannes\documents\workspacec++\astro\main.cpp
 	<iostream>
 	<conio.h>
 	<math.h>
@@ -12,6 +12,7 @@
 	"Koord.h"
 	"Planet.h"
 	"hello.h"
+	"Ellipse.h"
 
 1384170093 c:\users\johannes\documents\workspacec++\astro\include\koord.h
 
@@ -82,4 +83,31 @@
 
 1382969947 c:\users\philipp\workspacec++\astro2\include\test.h
 	<string>
+
+1386591494 source:c:\users\johannes\documents\workspacec++\astro\src\hochzahl.cpp
+	"Hochzahl.h"
+
+1386591494 c:\users\johannes\documents\workspacec++\astro\include\hochzahl.h
+
+1386591494 source:c:\users\johannes\documents\workspacec++\astro\src\test.cpp
+	"Test.h"
+
+1386591494 c:\users\johannes\documents\workspacec++\astro\include\test.h
+	<string>
+
+1386601557 c:\users\johannes\documents\workspacec++\astro\include\ellipse.h
+	<vector>
+	<iostream>
+	<sstream>
+	<string>
+	<conio.h>
+
+1387364504 source:c:\users\johannes\documents\workspacec++\astro\src\ellipse.cpp
+	"Ellipse.h"
+	"math.h"
+	<vector>
+	<iostream>
+	<sstream>
+	<string>
+	<conio.h>
 

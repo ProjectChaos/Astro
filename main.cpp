@@ -132,44 +132,74 @@ while(time<50){
         }
 }
 
-void writeEllipseCSV(Ellipse e){
-    //Read CSV using a vector of vector of string
-std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
-  std::string csvLine;
-  std::vector<std::vector<std::string> > data;
+double ellipse(){
+double a,b,t,y,x;
+cout << "Ellipsenberechnung" << endl;
+cin >> a;
+cin >> b;
+t=0;
+while(t<=200){
 
-  while( std::getline(input, csvLine) ){
-    std::istringstream csvStream(csvLine);
-    std::vector<std::string> csvRow;
-    std::string csvCol;
 
-    while( std::getline(csvStream, csvCol, ',') )
-      csvRow.push_back(csvCol);
-    data.push_back(csvRow);
-  }
-  return data;
+    if (t==0){
+        x=-a;
+        y=0;
+        cout<< x <<  "\t"  << y << endl;
+    }
+    if (t==200){
+        x=-a;
+        y=0;
+        cout<< x <<  "\t"  << y << endl;
+    }
+    else{
+        x=-a+(t*a)/100;
+        y=b*sqrt((1-((pow(x,2))/pow(a,2))));
+        cout<< x << "\t" <<y<< endl;
+        y*=-1;
+        cout<< x<< "\t" << y << endl;
+
+    }
+t++;}
+return 0;
 }
+//void writeEllipseCSV(Ellipse e){
+//   // Read CSV using a vector of vector of string
+//std::vector<std::vector<std::string> >  loadCSV(std::istream &input){
+//  std::string csvLine;
+//  std::vector<std::vector<std::string> > data;
+//
+//  while( std::getline(input, csvLine) ){
+//    std::istringstream csvStream(csvLine);
+//    std::vector<std::string> csvRow;
+//    std::string csvCol;
+//
+//    while( std::getline(csvStream, csvCol, ',') )
+//      csvRow.push_back(csvCol);
+//    data.push_back(csvRow);
+//  }
+//  return data;
+//}
 
 //Modify Data by accessing  elements of data[row][col]
 //Add new data using push_back ref. loadCsv function
 
 // Finally update
- void saveCSV(std::ostream &output,const std::vector<std::vector<std::string> >& data){
-  if(!data.size())
-    return;
-  std::vector<std::vector<std::string> >::const_iterator i=data.begin();
-  for(; i != data.end(); ++i){
-    std::vector<std::string> row =*i;
-        if(!row.size())
-            continue;
-    std::vector<std::string>::const_iterator j=row.begin();
-    output<<*(j++);
-    for(;i != row.end();++j)
-        output<<','<<*j;
-    output<<std::endl;
-  }
-}
-    }
+// void saveCSV(std::ostream &output,const std::vector<std::vector<std::string> >& data){
+//  if(!data.size())
+//    return;
+//  std::vector<std::vector<std::string> >::const_iterator i=data.begin();
+//  for(; i != data.end(); ++i){
+//    std::vector<std::string> row =*i;
+//        if(!row.size())
+//            continue;
+//    std::vector<std::string>::const_iterator j=row.begin();
+//    output<<*(j++);
+//    for(;i != row.end();++j)
+//        output<<','<<*j;
+//    output<<std::endl;
+//  }
+//}
+//    }
 int main()
 
 {
@@ -213,6 +243,9 @@ if(selection1=="c"){
 stepper(earth,mars);
 stepper(earth,venus);
 stepper(mars,venus);
+}
+if(selection1=="d"){
+    ellipse();
 }
 if(selection1=="x"){
     return 0;
